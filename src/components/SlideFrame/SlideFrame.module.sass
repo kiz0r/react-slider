@@ -1,0 +1,28 @@
+.slideFrame
+  width: 100%
+  height: 600px
+  position: relative
+
+.slideCaption
+  position: absolute
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: rgba(0, 0, 0, 0.5)
+  color: white
+  text-align: center
+  padding: 10px
+  max-height: 70px
+  transition: max-height 0.5s ease-in-out
+  overflow: hidden
+  &.showed
+    max-height: 300px
+
+.slideDescription
+  margin-top: 10px
+  font-size: 16px
+
+.slideImage
+  width: 100%
+  height: 100%
+  object-fit: cover
