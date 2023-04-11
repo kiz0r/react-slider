@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   slideFrame,
   slideCaption,
@@ -34,6 +35,14 @@ const SliderFrame = ({ slide: { title, description, src } }) => {
       </figcaption>
     </figure>
   );
+};
+
+SliderFrame.propTypes = {
+  slide: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    src: PropTypes.string,
+  }).isRequired,
 };
 
 export default SliderFrame;

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { sliderContainer, fullscreen } from './Slider.module.sass';
 import SliderControlPanel from '../SliderControlPanel';
 import SliderFrame from '../SlideFrame';
@@ -54,6 +54,16 @@ const Slider = ({ slides }) => {
       />
     </div>
   );
+};
+
+Slider.propTypes = {
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      description: PropTypes.string,
+      src: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 export default Slider;

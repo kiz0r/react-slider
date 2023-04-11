@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   FaPause,
   FaPlay,
@@ -58,6 +58,14 @@ const SliderControlPanel = ({
       </label>
     </div>
   );
+};
+
+SliderControlPanel.propTypes = {
+  isPaused: PropTypes.arrayOf(PropTypes.any).isRequired,
+  delay: PropTypes.arrayOf(PropTypes.any).isRequired,
+  incrementSlideIndex: PropTypes.func.isRequired,
+  decrementSlideIndex: PropTypes.func.isRequired,
+  isFullScreen: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default SliderControlPanel;
