@@ -37,10 +37,7 @@ const SliderControlPanel = ({
         <MyButton onClick={incrementSlideIndex}>
           <FaArrowCircleRight />
         </MyButton>
-        <MyButton
-          style={{ justifyContent: 'flex-end' }}
-          onClick={fullScreenHandler}
-        >
+        <MyButton onClick={fullScreenHandler}>
           {isFullScreen ? <FaCompress /> : <FaExpand />}
         </MyButton>
       </div>

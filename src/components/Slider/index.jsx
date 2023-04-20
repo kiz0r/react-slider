@@ -37,10 +37,10 @@ const Slider = ({ slides }) => {
     };
   }, [isPaused, delay, currentSlideIndex]);
 
-  const sliderContainerClassName = classNames(
-    `${isFullScreen ? fullscreen : ''}`,
-    sliderContainer
-  );
+  const sliderContainerClassName = classNames({
+    [fullscreen]: isFullScreen,
+    [sliderContainer]: true,
+  });
 
   return (
     <div className={sliderContainerClassName}>

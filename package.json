@@ -5,11 +5,11 @@
   "type": "module",
   "homepage": "http://kiz0r.github.io/react-slider",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "serve": "vite preview"
   },
   "dependencies": {
     "classnames": "^2.3.2",

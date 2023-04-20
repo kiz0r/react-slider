@@ -13,10 +13,10 @@ import classNames from 'classnames';
 const SliderFrame = ({ slide: { title, description, src } }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const captionClassName = classNames(
-    slideCaption,
-    `${isHovered ? showed : ''}`
-  );
+  const captionClassName = classNames({
+    [slideCaption]: true,
+    [showed]: isHovered,
+  });
 
   return (
     <figure
