@@ -37,9 +37,8 @@ const Slider = ({ slides }) => {
     };
   }, [isPaused, delay, currentSlideIndex]);
 
-  const sliderContainerClassName = classNames({
+  const sliderContainerClassName = classNames(sliderContainer, {
     [fullscreen]: isFullScreen,
-    [sliderContainer]: true,
   });
 
   return (
